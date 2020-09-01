@@ -13,7 +13,13 @@ class Attraction:
       return self.animals[-1]
 
   def __str__(self):
-    return f"The {self.attraction_name} is {self.description}"
+    return f"The {self.attraction_name} is {self.description} with {len(self)} animals"
 
   def add_animal(self, animal_to_add):
     self.animals.append(animal_to_add)
+
+  def remove_animal(self, animal):
+    self.animals.remove(animal)
+
+  def __len__(self):
+    return len(self.animals)
